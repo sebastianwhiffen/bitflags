@@ -14,6 +14,8 @@ int modifiedFlags;
 
 void frame() {
 
+    // check to see if flag is modified
+    // AND will return 0 if USER bit is not 1
   if (modifiedFlags & CVAR_USER) {
     // do some user related updates in here each frame
     printf("user flag modified \n");
@@ -25,7 +27,7 @@ void frame() {
     //			 ~CVAR_USER = 1111 1111 1111 1110
     //
     // modifiedFlags AND ~CVAR_USER = 0000 0000 0000 0000
-
+    // -----------------------------------------------------------------------------------------
 
     // (see above bits ^^^^^^)
     // NOT to invert the respective bit flags
